@@ -56,27 +56,28 @@ const setImageAttributes = (path, description)  => {
 searchBox.addEventListener('input', ({ target: { value } }) => {
   if(value)
   {
-    if (imgPatterns.bonita == value)
+    const toLowerValue = String(value).toLocaleLowerCase().trim();
+    if (imgPatterns.bonita == toLowerValue)
     {
       setImageAttributes(images.bonita.path, images.bonita.description);
       return;
     } 
-    else if (imgPatterns.amor == value)
+    else if (imgPatterns.amor == toLowerValue)
     {
       setImageAttributes(images.amor.path, images.amor.description);
       return;
     }
-    else if (imgPatterns.bella == value)
+    else if (imgPatterns.bella == toLowerValue)
     {
       setImageAttributes(images.bella.path, images.bella.description);
       return;
     }
-    else if (imgPatterns.hermosa == value)
+    else if (imgPatterns.hermosa == toLowerValue)
     {
       setImageAttributes(images.hermosa.path, images.hermosa.description);
       return;
     }
-    else if (imgPatterns.familia == value)
+    else if (imgPatterns.familia == toLowerValue)
     {
       setImageAttributes(images.familia.path, images.familia.description);
       return;
